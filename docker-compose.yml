@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   metabase:
-    image: metabase/metabase:v0.46.0-RC4
+    image: metabase/metabase:v0.46.8
     container_name: metabase_full_app_embedding_demo
     hostname: metabase
     ports:
