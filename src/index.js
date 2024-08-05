@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 
-import "./reset.css";
 import "./index.css";
+import "./reset.css";
 
 import {
-  BrowserRouter as Router,
-  Route,
-  Link,
   NavLink,
+  Route,
+  BrowserRouter as Router
 } from "react-router-dom";
 
+import Login from "./Login";
 import MetabaseAppEmbed from "./MetabaseAppEmbed";
 
 const getAppPath = location =>
@@ -51,15 +51,7 @@ const App = () => {
           exact
           path="/"
           render={() => (
-            <div style={{ padding: "2em" }}>
-              <h2>
-                Welcome to Metalbase
-                <Logo />
-              </h2>
-              <p>
-                <Link to="/analytics">View Metalbase Analytics</Link>
-              </p>
-            </div>
+            <Login></Login>
           )}
         />
         <Route
